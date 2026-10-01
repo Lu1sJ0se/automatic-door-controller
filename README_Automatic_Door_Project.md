@@ -15,9 +15,10 @@ The system detects a nearby person or object using the ultrasonic sensor and aut
 
 ## Team
 
+- Luis J. Negrón-Meléndez
 - Noelia P. Vallejo-López
 - Miguel A. De-Jesús-Rosa
-- Luis J. Negrón-Meléndez
+
 
 ## Problem Statement
 
