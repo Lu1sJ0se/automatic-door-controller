@@ -6,6 +6,16 @@ This project presents the design and implementation of an automatic door system 
 
 The system detects a nearby person or object using the ultrasonic sensor and automatically opens and closes a small model door. The project was developed as part of ELEN 330 and integrates analog electronics, digital control, sensing, motor control, and power electronics in a functional prototype.
 
+## Prototype
+
+<p align="center">
+  <img src="photos/rev-a/arduino-ultrasonic-interface.JPG" width="650">
+</p>
+
+<p align="center">
+  <em>Rev. A automatic door prototype integrating the Arduino-based controller, ultrasonic sensing, motor, and discrete H-bridge.</em>
+</p>
+
 ## Project Type
 
 - Academic design project
@@ -62,6 +72,16 @@ The original prototype is divided into four main subsystems:
 4. **Mechanical subsystem**  
    9 V DC motor mechanically coupled to a small cardboard door.
 
+## System Simulation
+
+<p align="center">
+  <img src="photos/rev-a/tinkercad-system-simulation.png" width="750">
+</p>
+
+<p align="center">
+  <em>TinkerCAD simulation of the Arduino Uno, HC-SR04 ultrasonic sensor, discrete H-bridge, DC motor, and 9 V motor supply.</em>
+</p>
+
 ## Hardware
 
 - Arduino Uno R3
@@ -93,6 +113,38 @@ The H-bridge uses:
 - 1 kΩ resistors for base-current limiting.
 
 The motor is connected between the two central nodes of the bridge. Activating opposite transistor pairs reverses the polarity applied to the motor, allowing the door to open or close.
+
+### H-Bridge Schematic
+
+<p align="center">
+  <img src="photos/rev-a/hbridge-schematic.JPG" width="650">
+</p>
+
+<p align="center">
+  <em>Schematic of the discrete H-bridge used for bidirectional control of the DC motor.</em>
+</p>
+
+## H-Bridge Development
+
+### Initial NPN/PNP Prototype
+
+<p align="center">
+  <img src="photos/rev-a/hbridge-prototype1.JPG" width="600">
+</p>
+
+<p align="center">
+  <em>Initial discrete H-bridge prototype using NPN and PNP transistors for bidirectional motor control.</em>
+</p>
+
+### TIP31C / TIP32C Implementation
+
+<p align="center">
+  <img src="photos/rev-a/hbridge-prototype2.JPG" width="600">
+</p>
+
+<p align="center">
+  <em>Revised H-bridge power stage implemented using TIP31C NPN and TIP32C PNP power transistors.</em>
+</p>
 
 ## Firmware
 
